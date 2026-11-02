@@ -2,9 +2,7 @@
 name: Multiple Jobs Workflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   first-workflow-jobs:
