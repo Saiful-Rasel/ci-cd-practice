@@ -1,0 +1,15 @@
+
+
+name: cron job
+
+on:
+ schedule:
+- ron:"*/5 * * * *"
+
+jobs:
+  cron-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: cron Step
+        run: echo "Hello World"
