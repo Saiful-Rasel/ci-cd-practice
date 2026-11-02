@@ -9,10 +9,10 @@
 #     run: echo "hello world"
 
 
-name: First Workflow
+name: manual-dispatch
 
 on:
-  push:
+  workflow-dispatch:
 
 jobs:
   first-workflow:
