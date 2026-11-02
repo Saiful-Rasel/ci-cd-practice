@@ -1,5 +1,5 @@
 
-name: dependent Multiple Jobs Workflow
+name: Dependent Multiple Jobs Workflow
 
 on:
   workflow_dispatch:
@@ -14,16 +14,16 @@ jobs:
 
   second-workflow-jobs:
     runs-on: ubuntu-latest
-    needs:["first-workflow-jobs"]
+    needs: first-workflow-jobs
 
     steps:
       - name: Second Step
         run: echo "Hi Friend"
 
-third-workflow-jobs:
+  third-workflow-jobs:
     runs-on: ubuntu-latest
-    needs:["first-workflow-jobs","second-workflow-jobs"]
+    needs: [first-workflow-jobs, second-workflow-jobs]
 
     steps:
-      - name: Second Step
+      - name: Third Step
         run: echo "faruumoni"
