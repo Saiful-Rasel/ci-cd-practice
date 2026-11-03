@@ -1,12 +1,28 @@
-name: Predefined Workflow
+name: Node.js CI Workflow
 
 on:
   workflow_dispatch:
 
 jobs:
-  predefined-workflow:
+  nodejs-check:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Node.js Version
-        run: node -v
+      # Step 1: Checkout repository code
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      # Step 2: Setup specific Node.js version
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      # Step 3: Verify Node.js and npm versions
+      - name: Check Runtime Versions
+        run: |
+          node -v
+          npm -v
+
+  
