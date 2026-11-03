@@ -25,4 +25,10 @@ jobs:
           node -v
           npm -v
 
-  
+      # Step 4: Install dependencies
+      - name: Install Dependencies
+        run: npm ci
+
+      # Step 5: Build application
+      - name: Build Application
+        run: npm run build
