@@ -1,0 +1,8 @@
+# GitHub Actions self-hosted runner
+actions-runner/
+
+# Node dependencies
+node_modules/actions-runner/
+node_modules/
+.env
+.env.*
