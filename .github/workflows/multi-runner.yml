@@ -48,8 +48,8 @@ jobs:
           echo "Hostname:"
           hostname
 
-      - name: Show Current User
-        run: whoami
+      - name: Show Current User dlsf
+        run: whoami 
 
       - name: Show Operating System
         run: uname -a
