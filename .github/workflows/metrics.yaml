@@ -1,0 +1,26 @@
+name: Metrics Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  metrics-overflow:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        uppercase: [A, B, C]
+        lowercase: [a, b, c]
+
+    steps:
+      - name: Echo Message
+        run: |
+          echo "Running matrix workflow"
+
+      - name: Print Matrix Uppercase
+        run: |
+          echo "${{ matrix.uppercase }}"
+
+      - name: Print Matrix All
+        run: |
+          echo "Matrix is: ${{ matrix.uppercase }} ${{ matrix.lowercase }}"
